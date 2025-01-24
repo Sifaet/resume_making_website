@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Maker</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Resume Maker</h1>
+    </header>
+
+    <!-- Input Form Section -->
+    <section id="input-form">
+        <h2>Your Information</h2>
+        <form id="resumeForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="summary">Summary:</label>
+            <textarea id="summary" name="summary"></textarea>
+
+            <!-- Skills Section -->
+            <div id="skills-section">
+                <label for="skills">Skills:</label>
+                <div id="skills-list">
+                    <input type="text" class="skill" name="skills[]" placeholder="Enter skill">
+                </div>
+                <button type="button" id="add-skill">Add Skill</button>
+            </div>
+
+            <!-- Experience Section -->
+            <div id="experience-section">
+                <label for="experience">Experience:</label>
+                <div id="experience-list">
+                    <input type="text" class="experience" name="experience[]" placeholder="Enter experience">
+                </div>
+                <button type="button" id="add-experience">Add Experience</button>
+            </div>
+
+            <!-- Education Section -->
+            <div id="education-section">
+                <label for="education">Education:</label>
+                <div id="education-list">
+                    <input type="text" class="education" name="education[]" placeholder="Enter education">
+                </div>
+                <button type="button" id="add-education">Add Education</button>
+            </div>
+
+            <!-- Key Achievements Section -->
+            <div id="achievements-section">
+                <label for="achievements">Key Achievements:</label>
+                <div id="achievements-list">
+                    <input type="text" class="achievement" name="achievements[]" placeholder="Enter achievement">
+                </div>
+                <button type="button" id="add-achievement">Add Achievement</button>
+            </div>
+
+            <button type="button" id="generate-pdf">Generate PDF</button>
+        </form>
+    </section>
+
+    <!-- Live Preview Section -->
+    <section id="preview">
+        <h2>Live Preview</h2>
+        <div id="resume-preview">
+            <!-- Dynamically populated preview goes here -->
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+    <script src="pdf.js"></script>
+</body>
+</html>
