@@ -1,0 +1,184 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Print Button */
+.print-btn {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.print-btn:hover {
+    background-color: #0b5bd3;
+}
+
+/* Resume Container */
+.container {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 80px auto 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* Full Width Section */
+.full-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.name-title {
+    flex: 1;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#profile-upload {
+    display: none; /* Hide the file input button */
+}
+
+#file-label {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#file-label:hover {
+    background-color: #0b5bd3;
+}
+
+/* Columns for the Resume */
+.columns {
+    display: flex;
+    gap: 20px;
+}
+
+.left-column {
+    width: 40%;
+}
+
+.right-column {
+    width: 60%;
+}
+
+h1 {
+    color: #1a73e8;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Add Section Button */
+.add-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.add-btn:hover {
+    background-color: #0b5bd3;
+}
+
+.add-section {
+    margin-top: 10px;
+}
+
+/* Hide Add Sections Completely in Print */
+@media print {
+    .navbar {
+        display: none;
+    }
+
+    body {
+        background-color: #fff;
+        margin: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        min-height: 297mm;
+    }
+
+    .add-section {
+        display: none !important;
+    }
+
+    .full-width {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .name-title {
+        flex: 1;
+    }
+
+    .profile-pic {
+        flex-shrink: 0;
+        margin-left: 20px;
+        position: relative;
+    }
+    #file-label {
+        display: none;
+    }
+}
+
